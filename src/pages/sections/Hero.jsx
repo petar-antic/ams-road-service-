@@ -18,7 +18,8 @@ const Hero = () => {
       as="section"
       id="hero"
       color="brand.black"
-      height="100vh"
+      height={{ base: "100vh", sm: "100%", md: "100vh" }}
+      marginTop={{ base: "unset", sm: "40%", md: "unset" }}
       display="flex"
       flexDirection={{ base: "column", md: "row", lg: "row", xl: "row" }}
       alignItems="center"

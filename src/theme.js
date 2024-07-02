@@ -33,7 +33,7 @@ const textStyles = {
   h1: {
     fontSize: {
       base: "24px",
-      sm: "32px",
+      sm: "28px",
       lg: "44px",
       xl: "48px",
       "2xl": "54px",
