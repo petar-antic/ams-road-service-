@@ -39,7 +39,7 @@ const Footer = () => {
             alt="logo"
           />
           <Text fontSize={{ base: "14px", xl: "16px" }}>
-            Part of Nonimilogiatics.INC
+            Part of Nonimilogistics.INC
           </Text>
         </HStack>
         <HStack spacing={4}>

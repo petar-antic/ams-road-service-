@@ -18,13 +18,13 @@ const servicesData = [
   {
     id: 2,
     name: "Tire change",
-    description: "Expert repair services for your car's fuel pump.",
+    description: "Quick and efficient flat tire repair and replacement.",
     icon: GiFlatTire,
   },
   {
     id: 3,
     name: "Fuel delivery",
-    description: "Quick and efficient flat tire repair and replacement.",
+    description: "Expert repair services for your car's fuel pump.",
     icon: BsFillFuelPumpFill,
   },
   {
