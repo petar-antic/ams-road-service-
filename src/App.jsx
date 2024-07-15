@@ -1,4 +1,5 @@
 import { ChakraProvider, Box } from "@chakra-ui/react";
+import { Helmet } from "react-helmet";
 import theme from "./theme";
 
 // Components import
@@ -13,6 +14,9 @@ import Footer from "./components/footer/Footer";
 const App = () => {
   return (
     <ChakraProvider theme={theme}>
+      <Helmet>
+        <link rel="canonical" href="https://www.amsroadservice.com/" />
+      </Helmet>
       <Box position="relative" width="100%" overflowX="hidden">
         <Navbar />
         <Box
