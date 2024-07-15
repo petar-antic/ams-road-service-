@@ -36,11 +36,12 @@ const Hero = () => {
         boxSize={{ base: "200px", sm: "250px", md: "300px" }}
         src={vectorCircle}
         alt="vectorCircle"
+        willChange="transform"
       />
       <MotionVStack
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.5 }} // Reduced duration
         spacing={{
           base: 3,
           lg: 5,
@@ -54,6 +55,7 @@ const Hero = () => {
           lg: "center",
           xl: "center",
         }}
+        willChange="opacity, transform"
       >
         <Text as="h1" textStyle="h1" textAlign="left" whiteSpace="nowrap">
           Get back on track{" "}
@@ -95,13 +97,14 @@ const Hero = () => {
         flex="1"
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.5 }} // Reduced duration
+        willChange="opacity, transform"
       >
         <Image
           src={illustration}
           alt="illustration"
           style={{ width: "100%" }}
-          transition={{ duration: 1, delay: 0.5 }}
+          transition={{ duration: 0.5, delay: 0.3 }} // Reduced duration
         />
       </MotionBox>
     </Box>
