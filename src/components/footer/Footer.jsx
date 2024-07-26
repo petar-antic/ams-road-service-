@@ -68,7 +68,7 @@ const Footer = () => {
           />
           <IconButton
             as="a"
-            href="https://www.google.com"
+            href="https://maps.app.goo.gl/sBbVTja6nGYN82M26"
             aria-label="Google"
             icon={<FaGoogle />}
             fontSize="20px"
