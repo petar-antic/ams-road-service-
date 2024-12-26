@@ -56,7 +56,7 @@ const Navbar = () => {
             <HStack
               color="brand.black"
               as="a"
-              href="tel:+1 (224) 468-1035"
+              href="tel:+1 (224) 247-7833"
               _hover={{
                 textDecoration: "underline",
               }}
@@ -67,7 +67,7 @@ const Navbar = () => {
                 fontSize={{ md: "18px", lg: "16px" }}
                 display={{ base: "none", md: "flex" }}
               >
-                +1 (224) 468-1035
+                +1 (224) 247-7833
               </Text>
             </HStack>
             <Divider

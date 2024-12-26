@@ -27,7 +27,6 @@ const Hero = () => {
       gap={10}
       width="full"
     >
-      {/* Vector image */}
       <Image
         zIndex={-1}
         top={{ base: "-3%", md: "-5%" }}
@@ -39,13 +38,13 @@ const Hero = () => {
         willChange="transform"
       />
       <MotionVStack
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }} // Reduced duration
-        spacing={{
-          base: 3,
-          lg: 5,
+        initial={{ opacity: 0, y: -50, scale: 0.95 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{
+          duration: 0.5,
+          ease: "easeInOut",
         }}
+        spacing={{ base: 3, lg: 5 }}
         align="start"
         flex="1"
         w="full"
@@ -76,18 +75,29 @@ const Hero = () => {
           with AMS Road Service
         </Text>
 
-        <ScrollLink to="contact" smooth={true} duration={500}>
-          <Button
-            _hover={{ background: "brand.yellow" }}
-            background="brand.yellow"
-            color="brand.black"
-            colorScheme="unset"
-            size={{ base: "md", lg: "lg" }}
-            leftIcon={<FaCarCrash />}
-          >
-            Get Assistance
-          </Button>
-        </ScrollLink>
+        <MotionBox
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.6,
+            ease: "easeInOut",
+            delay: 0.3,
+          }}
+        >
+          <ScrollLink to="contact" smooth={true} duration={500}>
+            <Button
+              _hover={{ background: "brand.yellow", transform: "scale(1.05)" }}
+              transition="all 0.3s ease-in-out"
+              background="brand.yellow"
+              color="brand.black"
+              colorScheme="unset"
+              size={{ base: "md", lg: "lg" }}
+              leftIcon={<FaCarCrash />}
+            >
+              Get Assistance
+            </Button>
+          </ScrollLink>
+        </MotionBox>
       </MotionVStack>
 
       <MotionBox
@@ -97,14 +107,14 @@ const Hero = () => {
         flex="1"
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5 }} // Reduced duration
+        transition={{ duration: 0.5 }}
         willChange="opacity, transform"
       >
         <Image
           src={illustration}
           alt="illustration"
           style={{ width: "100%" }}
-          transition={{ duration: 0.5, delay: 0.3 }} // Reduced duration
+          transition={{ duration: 0.5, delay: 0.3 }}
         />
       </MotionBox>
     </Box>
