@@ -9,8 +9,8 @@ import { FaCarCrash } from "react-icons/fa";
 import vectorCircle from "../../assets/vectorCircle.png";
 import illustration from "../../assets/illustrationBlack.png";
 
-const MotionBox = motion(Box);
-const MotionVStack = motion(VStack);
+const MotionBox = motion(Box, { forwardMotionProps: true });
+const MotionVStack = motion(VStack, { forwardMotionProps: true });
 
 const Hero = () => {
   return (
@@ -35,6 +35,7 @@ const Hero = () => {
         boxSize={{ base: "200px", sm: "250px", md: "300px" }}
         src={vectorCircle}
         alt="vectorCircle"
+        loading="lazy" // Lazy loading za bolje performanse
         willChange="transform"
       />
       <MotionVStack
@@ -86,6 +87,7 @@ const Hero = () => {
         >
           <ScrollLink to="contact" smooth={true} duration={500}>
             <Button
+              fontWeight="bold"
               _hover={{ background: "brand.yellow", transform: "scale(1.05)" }}
               transition="all 0.3s ease-in-out"
               background="brand.yellow"
@@ -114,6 +116,7 @@ const Hero = () => {
           src={illustration}
           alt="illustration"
           style={{ width: "100%" }}
+          loading="lazy"
           transition={{ duration: 0.5, delay: 0.3 }}
         />
       </MotionBox>

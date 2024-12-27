@@ -114,7 +114,7 @@ const Contact = () => {
           <HStack
             color="brand.black"
             as="a"
-            href="tel:+1 (224) 468-1035"
+            href="tel:+1 (224) 247-7833"
             _hover={{
               textDecoration: "underline",
             }}
@@ -122,7 +122,7 @@ const Contact = () => {
           >
             <Icon as={FaPhoneAlt} boxSize="20px" color="brand.black" />
             <Text fontSize={{ base: "18px", xl: "20px" }}>
-              +1 (224) 468-1035
+              +1 (224) 247-7833
             </Text>
           </HStack>
         </VStack>
